@@ -2,8 +2,6 @@
 This project demonstrates how to use Azure Service Bus Topics with Subscription Filters to send and receive targeted messages. 
 
 
-# **Azure Service Bus Topic with Subscription Filters - README**
-
 ## **📌 Overview**
 This project demonstrates how to use **Azure Service Bus Topics** with **Subscription Filters** to send and receive targeted messages. The goal is to ensure that only specific subscribers receive messages based on predefined filters.
 
@@ -100,6 +98,30 @@ public class Spain
 ## **🏗️ Setting up Subscription Filters**
 Subscription filters must be created **before running the subscribers**. You can set them up using **Azure Portal** or **C# Code**.
 
+### **Azure portal tutorial for Creating Filters**
+1. Create a **Service Bus Namespace** with pricing tier **STANDARD**.
+  
+![image](https://github.com/user-attachments/assets/969aa162-6a38-4cec-9fd0-f0acff0c79a7)
+
+2. Create a **Topic** called "ventas".
+
+![image](https://github.com/user-attachments/assets/bcc14b51-edd5-4d57-94e1-3f8b08a3a447)
+
+3. Click on the **Service Bus Topic** "ventas" and create the needed subscriptions:
+
+![image](https://github.com/user-attachments/assets/5d692b07-3f8e-4d70-a126-0fca90627c5d)
+
+4. Click on the Service Bus Subscription and add a filter.
+5. Must be type **SQL Filter**.
+6. And add the SQL expression: `"destiny = 'denmark' OR destiny = 'north' OR destiny = 'all'"`.
+![image](https://github.com/user-attachments/assets/0f7c589d-3cff-4d69-90e7-eed7d34542eb)
+
+
+7. Run
+![Untitled](https://github.com/user-attachments/assets/bde5b5d5-dddb-418a-9c4b-0cadd1e984b0)
+
+---
+
 ### **C# Code for Creating Filters**
 ```csharp
 using Azure.Messaging.ServiceBus.Administration;
@@ -131,7 +153,10 @@ class SubscriptionSetup
     }
 }
 ```
-
+---
+**Source:** 
+- https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions?tabs=connection-string
+- https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-filter-examples
 ---
 
 ## **✅ Expected Output**
