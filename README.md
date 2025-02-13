@@ -107,6 +107,9 @@ Subscription filters must be created **before running the subscribers**. You can
 
 ![image](https://github.com/user-attachments/assets/bcc14b51-edd5-4d57-94e1-3f8b08a3a447)
 
+2.1. Under the **Settings** menu you can find the **Shared access policies** and the connection string:
+![image](https://github.com/user-attachments/assets/856b6d74-465e-4f97-bf70-388a8ffd924b)
+
 3. Click on the **Service Bus Topic** "ventas" and create the needed subscriptions:
 
 ![image](https://github.com/user-attachments/assets/5d692b07-3f8e-4d70-a126-0fca90627c5d)
